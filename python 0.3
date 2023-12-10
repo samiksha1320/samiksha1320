@@ -1,0 +1,90 @@
+
+1. enumerate:
+   - Explanation: enumerate is a built-in function in Python that adds counter to an iterable and returns it as an enumerate object.
+   - Syntax: enumerate(iterable, start=0)
+   - Example:
+     python
+     fruits = ['apple', 'banana', 'cherry']
+     for index, value in enumerate(fruits, start=1):
+         print(f"Index: {index}, Value: {value}")
+     
+     Output:
+     
+     Index: 1, Value: apple
+     Index: 2, Value: banana
+     Index: 3, Value: cherry
+     
+
+2. reduce:
+   - Explanation: reduce is a function from the functools module that successively applies a function to the elements of an iterable, reducing it to a single cumulative value.
+   - Syntax: functools.reduce(function, iterable[, initializer])`
+   - Example:
+     python
+     from functools import reduce
+     numbers = [1, 2, 3, 4, 5]
+     product = reduce(lambda x, y: x * y, numbers)
+     print(product)
+     
+     Output:
+     
+     120
+     
+
+3. map:
+   - Explanation: map applies a given function to all items in an input iterable and returns an iterator.
+   - Syntax: `map(function, iterable, ...)`
+   - Example:
+     python
+     numbers = [1, 2, 3, 4, 5]
+     squared = map(lambda x: x**2, numbers)
+     print(list(squared))
+    
+     Output:
+     
+     [1, 4, 9, 16, 25]
+     
+
+4. filter:
+   - Explanation: `filter` constructs an iterator from elements of an iterable for which a function returns true.
+   - Syntax: `filter(function, iterable)`
+   - Example:
+     python
+     numbers = [1, 2, 3, 4, 5]
+     even_numbers = filter(lambda x: x % 2 == 0, numbers)
+     print(list(even_numbers))
+     
+     Output:
+     
+     [2, 4]
+     
+
+5. zip:
+   - Explanation: zip aggregates elements from two or more iterables into tuples, stopping when the shortest input iterable is exhausted.
+   - Syntax: zip(iterable1, iterable2, ...)`
+   - Example:
+     python
+     names = ['Alice', 'Bob', 'Charlie']
+     ages = [25, 30, 22]
+     zipped_data = zip(names, ages)
+     print(list(zipped_data))
+     
+     Output:
+     
+     [('Alice', 25), ('Bob', 30), ('Charlie', 22)]
+     
+
+6. id:
+   - Explanation: id returns the identity of an object, which is a unique integer representing its identity.
+   - Syntax:  id(object)`
+   - Example:
+     python
+     x = 42
+     y = x
+     print(id(x))
+     print(id(y))
+     
+     Output:
+     
+     140732050517776
+     140732050517776
+     
